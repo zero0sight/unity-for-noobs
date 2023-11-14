@@ -92,3 +92,45 @@ class Program
 // Child Constructor.
 // I can print.
 ```
+
+## Polymorphism
+Polymorphism means one name, many forms.
+
+One function behaves in different forms. In other words "Many forms of a single object is called Polymorphism".
+```C#
+// Static or compile-time polymorphism (overloading)
+public class TestData
+{
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+```
+```C#
+// Dynamic or run-time polymorphism (overriding)
+public class Drawing
+{
+    public virtual double Area()
+   {
+         return 0;
+   }
+}
+
+public class Circle : Drawing
+{
+    public double Radius { get; set; }
+    public Circle()
+    {
+        Radius = 5;
+    }
+    public override double Area()
+    {
+        return (3.14) * Math.Pow(Radius, 2);
+    }
+}
+```
