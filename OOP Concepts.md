@@ -70,6 +70,7 @@ public class Parent
         Console.WriteLine("I can print.");
     }
 }
+
 public class Child: Parent
 {
     public Child()
@@ -77,12 +78,13 @@ public class Child: Parent
         Console.WriteLine("Child Constructor.");
     }
 }
+
 class Program
 {
     static void Main(string[] args)
     {
-        Child child = new Child();
-        child.print();
+        Child firstChild = new Child();
+        firstChild.print();
     }
 }
 // Output:
