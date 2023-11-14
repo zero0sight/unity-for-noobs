@@ -4,7 +4,7 @@ Everything is object. Even you!
 Remember these Concepts of OOP
 - Abstraction
 - Encapsulation
-- Inheritence
+- Inheritance
 - Polymorphism
 
 ## Abstraction
@@ -52,4 +52,41 @@ public class Car
         }
     }
 }
+```
+
+## Inheritance
+When a class includes a property of another class, it is known as inheritance.
+
+Inheritance is a process of object reusablity.
+```C#
+public class Parent
+{
+    public Parent()
+    {
+        Console.WriteLine("Parent Constructor.");
+    }
+    public void print()
+    {
+        Console.WriteLine("I can print.");
+    }
+}
+public class Child: Parent
+{
+    public Child()
+    {
+        Console.WriteLine("Child Constructor.");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Child child = new Child();
+        child.print();
+    }
+}
+// Output:
+// Parent Constructor.
+// Child Constructor.
+// I can print.
 ```
