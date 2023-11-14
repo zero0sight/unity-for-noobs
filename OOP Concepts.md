@@ -34,7 +34,7 @@ public class Car {
 }
 ```
 ```C#
-// You can't modify _speed unless you go through Speed validation that Car class provides.
+// You can't modify _speed from outside unless you go through Speed validation that Car class provides.
 public class Car {
     private int _speed;
     public int Speed {
