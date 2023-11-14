@@ -29,13 +29,15 @@ Encapsulation binds code and the data it manipulates and keeos them safe frome o
 Encapsulation is achieved through use of access modifires, such as `private`, `protected` and `internal`.
 ```C#
 // You can't modify speed outside of Car class.
-public class Car {
+public class Car
+{
     public int Speed { get; private set; }
 }
 ```
 ```C#
 // You can't modify _speed from outside unless you go through Speed validation that Car class provides.
-public class Car {
+public class Car
+{
     private int _speed;
     public int Speed
     {
