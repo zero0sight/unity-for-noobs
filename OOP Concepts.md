@@ -27,3 +27,24 @@ public abstract class MobilePhone
 Encapsulation binds code and the data it manipulates and keeos them safe frome outside interference and misuse.
 
 Encapsulation is achieved through use of access modifires, such as `private`, `protected` and `internal`.
+```C#
+// You can't modify speed outside of Car class.
+public class Car {
+    public int Speed { get; private set; }
+}
+```
+```C#
+// You can't modify _speed unless you go through Speed validation that Car class provides.
+public class Car {
+    private int _speed;
+    public int Speed {
+        get {
+            return _speed;
+        }
+        set {
+            if (_speed > 0) _speed = value;
+            else _speed = 0;
+        }
+    }
+}
+```
