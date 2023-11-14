@@ -1,6 +1,8 @@
 # Object Oriented Programming in C#
-Remember these
+Everything is object. Even you!
+
+Remember these Concepts of OOP
 - Abstraction
 - Encapsulation
 - Inheritence
-- Polymophism
+- Polymorphism
