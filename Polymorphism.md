@@ -94,7 +94,9 @@ void totalSum(int a, int b) {...}
 void totalSum(double a, double b) {...}
 ```
 - Operator overloading
-
+```C#
+string concatenatedString = firstString * secondString;
+```
 
 
 
