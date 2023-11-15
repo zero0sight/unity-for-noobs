@@ -98,5 +98,28 @@ void totalSum(double a, double b) {...}
 string concatenatedString = firstString * secondString;
 ```
 
+## Run-time Polymorphism
+In runtime polymorphism, the method that is called is determined at the runtime not at compile time.
+
+The runtime polymorphism is achieved by:
+- Method overriding
+```C#
+class Polygon
+{
+    // method to render a shape
+    public virtual void render()
+    {
+        Console.WriteLine("Rendering Polygon...");
+    }
+}
+
+class Square : Polygon
+{
+    // overriding render() method 
+    public override void render()
+    {
+        Console.WriteLine("Rendering Square...");
+    }
+```
 
 
