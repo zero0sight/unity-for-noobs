@@ -82,7 +82,7 @@ In compile time polymorphism, the compiler identifies which method is being call
 In C#, we achieve compile time polymorphism through 2 ways:
 
 - Method overloading
--- different numbers of parameter
--- types of parameter
+  - different numbers of parameter
+  - types of parameter
 - Operator overloading
 
