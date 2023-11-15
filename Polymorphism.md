@@ -120,6 +120,7 @@ class Square : Polygon
     {
         Console.WriteLine("Rendering Square...");
     }
+}
 ```
 
 
