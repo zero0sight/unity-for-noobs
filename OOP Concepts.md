@@ -24,7 +24,7 @@ public abstract class MobilePhone
 ```
 
 ## Encapsulation
-Encapsulation binds code and the data it manipulates and keeos them safe frome outside interference and misuse.
+Encapsulation binds code and the data it manipulates and keeps them safe from outside interference and misuse.
 
 Encapsulation is achieved through use of access modifires, such as `private`, `protected` and `internal`.
 ```C#
