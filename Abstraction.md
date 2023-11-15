@@ -7,7 +7,7 @@ Abstraction can be achieved with either abstract calsses or interfaces.
 - Abstract class is a restricted class that cannot be used to create objects (it must be inherited)
 - Abstract class can have both avstract and regular methods.
 - `abstract` (need to be inherited) cannot be used with `sealed` (cannot be inherited). They have opposite meanings.
-- Abstract method can only be used in abstact class, and it does not have a body. the body is provided by derived class.
+- Abstract method can only be used in abstract class, and it does not have a body. the body is provided by derived class.
 - An abstract mehod is implicity a virtual method.
 - It is and error to use `static` or `virtual` modifiers in an abstract method declaration.
 ```C#
