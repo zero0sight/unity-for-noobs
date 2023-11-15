@@ -83,6 +83,18 @@ In C#, we achieve compile time polymorphism through 2 ways:
 
 - Method overloading
   - different numbers of parameter
+```C#
+void totalSum() {...}
+void totalSum(int a) {...}
+void totalSum(int a, int b) {...}
+```
   - types of parameter
+```C#
+void totalSum(int a, int b) {...}
+void totalSum(double a, double b) {...}
+```
 - Operator overloading
+
+
+
 
