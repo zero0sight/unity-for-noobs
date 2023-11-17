@@ -76,7 +76,7 @@ public class UserService
 }
 ```
 
-## Open/Closed principle
+## Open/Closed principle (OCP)
 That brings us to the next principle: open for extension, closed for modification.
 
 How is it done? Preferably not like this:
@@ -104,10 +104,21 @@ void Draw(Nerd nerd)
 }
 ```
 
-## Liskov substitution principle
-The Liskov Substitution Principle (LSP) states, "you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification.".
+## Liskov substitution principle (LSP)
+The Liskov Substitution Principle (LSP) states, "you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification".
 
 It ensures that a derived class does not affect the behavior of the parent class; in other words, a derived class must be substitutable for its base class.
 
 This principle is just an extension of the Open Closed Principle, and we must ensure that newly derived classes extend the base classes without changing their behavior.
 
+## Interface segregation principle (ISP)
+The Interface Segregation Principle states "that clients should not be forced to implement interfaces they don't use.
+
+Instead of one fat interface, many small interfaces are preferred based on groups of methods, each serving one submodule".
+
+## Dependency inversion principle (DIP)
+The Dependency Inversion Principle (DIP) states that high-level modules/classes should not depend on low-level modules/classes.
+
+First, both should depend upon abstractions.
+
+Secondly, abstractions should not rely upon details. Finally, details should depend upon abstractions.
