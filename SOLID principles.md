@@ -14,6 +14,7 @@ The Single Responsibility Principle is often defined as: An object should only h
 
 the longer the file or class, the more difficult it will be to achieve this. With that definition in mind, look at this code:
 ```C#
+// Bad example
 public class UserService
 {
    public void Register(string email, string password)
@@ -74,3 +75,39 @@ public class UserService
    }
 }
 ```
+
+## Open/Closed principle
+That brings us to the next principle: open for extension, closed for modification.
+
+How is it done? Preferably not like this:
+```C#
+// Bad example
+void DrawNerd(Nerd nerd) {
+  if (nerd.IsSelected)
+    DrawEllipseAroundNerd(nerd.Position, nerd.Radius);
+  if (nerd.Image != null)
+    DrawImageOfNerd(nerd.Image, nerd.Position, nerd.Heading);
+  if (nerd is IHasBelt) // a rare occurrence
+    DrawBelt(((IHasBelt)nerd).Belt);
+  // Etc.
+}
+```
+What’s wrong here? Well, you’ll have to modify this method every time a customer needs new things displayed—and they always need new things displayed.
+
+You need a better plan, but how? What will it look like? Well, you have some code that knows how to draw certain things. That’s fine. You just need a general procedure for matching those things with the code to draw them. It will essentially come down to a pattern like this:
+```C#
+readonly IList<IRenderer> _renderers = new List<IRenderer>();
+void Draw(Nerd nerd)
+{
+  foreach (var renderer in _renderers)
+    renderer.DrawIfPossible(_context, nerd);
+}
+```
+
+## Liskov substitution principle
+The Liskov Substitution Principle (LSP) states, "you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification.".
+
+It ensures that a derived class does not affect the behavior of the parent class; in other words, a derived class must be substitutable for its base class.
+
+This principle is just an extension of the Open Closed Principle, and we must ensure that newly derived classes extend the base classes without changing their behavior.
+
