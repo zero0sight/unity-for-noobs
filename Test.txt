@@ -1,45 +1,248 @@
-Tuic and Hysteria confing's🔥
-
-ISP: MTN-MCI-MKH
-
-TUIC:
-
-Number 1:
-tuic://3618921b-adeb-4bd3-a2a0-f98b72a674b1:dongtaiwang@108.181.24.7:23450/?congestion_control=bbr&udp_relay_mode=native&sni=www.google.com&alpn=h3&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
-Number 2:
-tuic://975b32a7-51dc-45c4-ba8d-3b57dc71e453:opetateam1tuic@188.132.209.49:52300/?congestion_control=bbr&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
-Number 3:
-tuic://a6ccf4f3-2b05-48ff-b440-2e3dce3e216a:iLHa7ogC0RjF@108.181.22.239:26789/?congestion_control=cubic&udp_relay_mode=native&sni=www.bing.com&alpn=h3&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
-Number 4:
-tuic://38e38f61-b1dd-4b34-90d0-f6222fd7393f:e7b1c11f0d40cc95@209.250.254.198:443/?congestion_control=bbr&udp_relay_mode=native&sni=www.apple.com&alpn=h3&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
-Number 5:
-tuic://ea8be14e-f82a-43ae-90b2-e110a7c7e164:dongtaiwang.com@108.181.22.239:12980/?congestion_control=bbr&udp_relay_mode=native&sni=www.google.com&alpn=h3&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
-Number 6:
-tuic://d6214437-e1b5-4334-9090-8f66b78bea89:dongtaiwang@108.181.22.205:50987/?congestion_control=bbr&udp_relay_mode=native&sni=www.google.com&alpn=h3&allow_insecure=1#%40EUT_VPN%20%7CTUIC%7C
-
--_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-HYSTERIA:
-
-Number 1:
-hysteria://173.234.25.52:20164/?insecure=1&peer=www.microsoft.com&auth=Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F&upmbps=0&downmbps=0&alpn=h3#%40EUT_VPN%20%7CHYSTERIA%7C
-
-Number 2:
-hysteria://62.204.54.81:37899/?insecure=1&peer=www.microsoft.com&auth=OdHFS3zC3HlSYJmc0GLQNKLAlwDbJqEmonVBXmI07T0Ojb1bQB&upmbps=2&downmbps=10&alpn=h3#%40EUT_VPN%20%7CHYSTERIA%7C
-
-Number 3:
-hysteria://108.181.22.239:61561/?insecure=1&peer=www.bing.com&auth=PBhG3zqMKaMO5ZnemDvLrZ6v0Fd7EqCutDvzLNtvWHJ6IpMWJg&upmbps=0&downmbps=0&alpn=h3#%40EUT_VPN%20%7CHYSTERIA%7C
-
-Number 4:
-hysteria://50.114.40.110:62839/?peer=hy.chushenyun.top&auth=K6MWhE5PP8aKzSGIF1I4Zjb8tpLicSG3NzWckWLsRIGZ9CAOc9&upmbps=0&downmbps=0&alpn=h3&protocol=wechat-video#%40EUT_VPN%20%7CHYSTERIA%7C
-
-Number 5:
-hy2://y0qochAspE+u-HLfrip-@45.32.237.246:443/?insecure=1&sni=Google.com&obfs=salamander&obfs-password=2pU%21%26Brls%210exuP%2B%214so#%40EUT_VPN%20%7CHYSTERIA%7C
-
-Number 6:
-hysteria://51.158.54.46:11926/?insecure=1&peer=www.google.com&auth=Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs&upmbps=80&downmbps=100&alpn=h3#%40EUT_VPN%20%7CHYSTERIA%7C
+{
+  "log": {
+    "disabled": false,
+    "level": "fatal",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "yacd",
+      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "secret": "",
+      "default_mode": "rule"
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "address": "tcp://95.85.95.85",
+        "address_resolver": "dns-direct",
+        "strategy": "ipv4_only",
+        "tag": "dns-remote"
+      },
+      {
+        "address": "tcp://95.85.95.85",
+        "address_resolver": "dns-local",
+        "detour": "direct",
+        "strategy": "ipv4_only",
+        "tag": "dns-direct"
+      },
+      {
+        "address": "local",
+        "detour": "direct",
+        "tag": "dns-local"
+      },
+      {
+        "address": "rcode://success",
+        "tag": "dns-block"
+      }
+    ],
+    "rules": [
+      {
+        "domain_suffix": [
+          ".ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "outbound": "direct",
+        "server": "dns-direct",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "any",
+        "server": "dns-direct",
+        "rewrite_ttl": 20
+      }
+    ],
+    "reverse_mapping": true,
+    "strategy": "ipv4_only",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "listen_port": 6450,
+      "override_address": "8.8.8.8",
+      "override_port": 53,
+      "tag": "dns-in",
+      "type": "direct"
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "domain_strategy": "",
+      "interface_name": "tun0",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system",
+      "endpoint_independent_nat": true,
+      "sniff": true,
+      "sniff_override_destination": false
+    },
+    {
+      "domain_strategy": "",
+      "listen": "0.0.0.0",
+      "listen_port": 2080,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "mixed-in",
+      "type": "mixed"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "worker"
+      ]
+    },
+    {
+      "tag": "URL-TEST",
+      "type": "urltest",
+      "outbounds": [
+        "worker"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "packet_encoding": "",
+      "server": "104.26.15.85",
+      "server_port": 8443,
+      "tls": {
+        "alpn": [
+          "h3"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "server_name": "bridge.wantedone.WorkerS.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "bridge.wantedone.WorkerS.dev"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "c742c11e-c424-4572-b76e-574ab1f0afa7",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "worker"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "bypass",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "final": "proxy",
+    "geoip": {
+      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
+      "download_detour": "direct"
+    },
+    "geosite": {
+      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
+      "download_detour": "direct"
+    },
+    "rules": [
+      {
+        "outbound": "dns-out",
+        "port": [
+          53
+        ]
+      },
+      {
+        "inbound": [
+          "dns-in"
+        ],
+        "outbound": "dns-out"
+      },
+      {
+        "domain_suffix": [
+          "ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "ir",
+          "private",
+          "arvancloud"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "geosite:category-ads-all",
+          "malware",
+          "phishing",
+          "cryptominers"
+        ],
+        "outbound": "block"
+      },
+      {
+        "geosite": [
+          "other"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "malware",
+          "phishing"
+        ],
+        "outbound": "block"
+      },
+      {
+        "network": [
+          "udp"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "outbound": "block",
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      }
+    ]
+  }
+}
