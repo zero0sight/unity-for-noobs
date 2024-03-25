@@ -1,0 +1,209 @@
+{
+    "dns": {
+        "disableFallback": true,
+        "servers": [
+            {
+                "address": "https://94.140.14.14/dns-query",
+                "domains": [],
+                "queryStrategy": ""
+            },
+            {
+                "address": "1.1.1.1",
+                "domains": [
+                    "domain:.ir",
+                    "geosite:private",
+                    "geosite:category-ir"
+                ],
+                "queryStrategy": ""
+            }
+        ],
+        "tag": "dns"
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 2080,
+            "protocol": "socks",
+            "settings": {
+                "udp": true
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true,
+                "metadataOnly": false,
+                "routeOnly": true
+            },
+            "tag": "socks-in"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 2081,
+            "protocol": "http",
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true,
+                "metadataOnly": false,
+                "routeOnly": true
+            },
+            "tag": "http-in"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "www.speedtest.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "c8f97c6f-a1ff-43fb-a659-97a1a99fd614",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "publicKey": "",
+                    "serverName": "bpB-WOrKER-paNEL2.WaNtedoNe.WoRKers.DeV",
+                    "shortId": "",
+                    "show": false,
+                    "spiderX": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "BPb-WorKer-PAnEl2.waNTEdone.WorkERs.dev"
+                    },
+                    "path": "/74NnPi4wgtqukQxA?ed=2048"
+                },
+                "sockopt": {
+                    "dialerProxy": "fragment"
+                }
+            },
+            "tag": "proxy"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "AsIs",
+                "fragment": {
+                    "length": "10-20",
+                    "interval": "10-20",
+                    "packets": "tlshello"
+                }
+            },
+            "streamSettings": {
+                "sockopt": {
+                    "tcpKeepAliveIdle": 100
+                }
+            },
+            "tag": "fragment"
+        },
+        {
+            "domainStrategy": "",
+            "protocol": "freedom",
+            "tag": "bypass"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        },
+        {
+            "protocol": "dns",
+            "proxySettings": {
+                "tag": "proxy",
+                "transportLayer": true
+            },
+            "settings": {
+                "address": "1.1.1.1",
+                "network": "tcp",
+                "port": 53,
+                "userLevel": 1
+            },
+            "tag": "dns-out"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "1": {
+                "connIdle": 30
+            }
+        },
+        "system": {
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
+        }
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "ip": [
+                    "1.1.1.1"
+                ],
+                "outboundTag": "bypass",
+                "type": "field"
+            },
+            {
+                "inboundTag": [
+                    "socks-in",
+                    "http-in"
+                ],
+                "outboundTag": "dns-out",
+                "port": "53",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "geosite:category-ads-all",
+                    "geosite:category-ads-ir"
+                ],
+                "outboundTag": "block",
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "geoip:ir",
+                    "geoip:private"
+                ],
+                "outboundTag": "bypass",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "geosite:private",
+                    "geosite:category-ir",
+                    "domain:.ir"
+                ],
+                "outboundTag": "bypass",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {}
+}
