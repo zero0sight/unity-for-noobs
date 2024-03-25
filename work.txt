@@ -112,7 +112,7 @@
             "settings": {
                 "domainStrategy": "AsIs",
                 "fragment": {
-                    "length": "10-20",
+                    "length": "100-200",
                     "interval": "10-20",
                     "packets": "tlshello"
                 }
