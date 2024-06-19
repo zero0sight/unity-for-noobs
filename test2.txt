@@ -4,3 +4,4 @@ vmess://eyJhZGQiOiI5Mi4yMjMuMTI0LjMyIiwiYWlkIjoiMCIsImhvc3QiOiJidWRhcGVzdHdpbGx0
 vless://659347a1-fb72-4b24-98e3-6c61eaaa4b67@151.101.101.57:443?security=tls&sni=fastly.com&alpn=http/1.1&fp=randomized&type=ws&path=/&host=unitycoursefromgermanyisfun.net&encryption=none#S1-Fastly
 vless://659347a1-fb72-4b24-98e3-6c61eaaa4b67@151.101.245.57:443?security=tls&sni=fastly.com&alpn=http/1.1&fp=randomized&type=ws&path=/&host=unitycoursefromgermanyisfun.net&encryption=none#S1-Fastly
   vless://659347a1-fb72-4b24-98e3-6c61eaaa4b67@151.101.181.57:443?security=tls&sni=fastly.com&alpn=http/1.1&fp=randomized&type=ws&path=/&host=unitycoursefromgermanyisfun.net&encryption=none#S1-Fastly
+vless://659347a1-fb72-4b24-98e3-6c61eaaa4b67@151.101.37.57:443?security=tls&sni=fastly.com&alpn=http/1.1&fp=randomized&type=ws&path=/&host=jittertest.ir&encryption=none#S1-Fastly
