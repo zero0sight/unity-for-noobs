@@ -12,3 +12,4 @@ vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.2.133:80?encryption=none&se
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXS-443
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXS2-443
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&allowInsecure=1&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXN2-443
+hysteria2://tVPoREuJge@165.227.131.72:4777?insecure=1&obfs=salamander&obfs-password=SLWosqpaQsdffzz7#DeHy2
