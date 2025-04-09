@@ -2,3 +2,13 @@ vmess://eyJhZGQiOiI2NC4yMjcuNjcuMTU2IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6ImE2OWY4
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:443?security=tls&sni=default.ssl.fastly.net&alpn=h2&fp=chrome&type=xhttp&encryption=none#DeFastlyX-443
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:80?security=&type=xhttp&encryption=none#DeFastlyX2-80
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@speedtest.net:80?security=&type=xhttp&encryption=none#DeFastlyX-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&allowInsecure=1&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXN-443
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@speedtest.net:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=auto#DeFastlyX-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyX2-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.66.133:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyX3-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.130.133:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyX4-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.194.33:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyX5-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.2.133:80?encryption=none&security=none&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyX6-80
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.5.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXS-443
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&alpn=h2%2Chttp%2F1.1&fp=chrome&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXS2-443
+vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&allowInsecure=1&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXN2-443
