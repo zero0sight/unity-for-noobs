@@ -14,3 +14,4 @@ vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&s
 vless://69e26958-361b-4b52-8fc7-3f9a430a411c@151.101.7.219:443?encryption=none&security=tls&sni=default.ssl.fastly.net&allowInsecure=1&type=xhttp&host=tryfastestrouteinworld.com&path=%2F&mode=packet-up#DeFastlyXN2-443
 hysteria2://tVPoREuJge@165.227.131.72:4777?insecure=1&obfs=salamander&obfs-password=SLWosqpaQsdffzz7#DeHy2
 vmess://eyJhZGQiOiIxMDkuNzUuMTYxLjEzNCIsImFpZCI6IjAiLCJob3N0IjoiIiwiaWQiOiIxOWRjNWJmZS1iYjhkLTQ4M2YtYWNjYy0xZjFmYmIyM2JhYzciLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjEwNDE5IiwicHMiOiJVSyBWUE4iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+hysteria2://tVPoREuJge@165.227.131.72:4777?insecure=1&obfs=salamander&obfs-password=SLWosqpaQsdffzz7#DeHy2
